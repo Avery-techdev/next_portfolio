@@ -1,26 +1,28 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Portfolio Design Tokens — Single Source of Truth (Tailwind v4 @theme)
+ * Classes available: bg-canvas, text-ink, text-accent, border-edge, etc.
+ * Never use arbitrary color values in components — add tokens here instead. */
+@theme {
+  --color-canvas: #0b0b0b;
+  --color-canvas-elevated: #141414;
+  --color-ink: #ffffff;
+  --color-ink-muted: #9a9a9a;
+  --color-accent: #4ecca3;
+  --color-edge: #252525;
 }
 
+/* Font tokens reference JS-injected CSS vars from next/font — inline keeps them reactive */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
 }
