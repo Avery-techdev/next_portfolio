@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CtaLink } from "@/components/ui/CtaLink";
 
 export function HeroSection() {
@@ -20,7 +21,7 @@ export function HeroSection() {
           </h1>
 
           <p className="mt-6 max-w-sm text-base leading-relaxed text-ink-muted md:text-lg">
-            I&apos;m a front-end developer passionate about
+            I&apos;m a frontend developer passionate about
             building beautiful, accessible web apps that
             users love.
           </p>
@@ -30,36 +31,22 @@ export function HeroSection() {
           </CtaLink>
         </div>
 
-        {/* Profile photo — replace div with next/image once you have public/profile.jpg */}
+        {/* Profile photo */}
         <div className="flex justify-center md:justify-end">
-          <div
-            className="relative h-80 w-64 overflow-hidden border border-edge bg-canvas-elevated sm:h-96 sm:w-72"
-            role="img"
-            aria-label="Profile photo placeholder"
-          >
+          <div className="relative h-80 w-64 overflow-hidden border border-edge sm:h-96 sm:w-72">
             {/* Decorative circle accent */}
             <div
               className="absolute -bottom-10 -right-10 h-44 w-44 rounded-full border-2 border-ink-muted opacity-20"
               aria-hidden="true"
             />
-
-            {/* Placeholder person silhouette */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-ink-muted">
-              <svg
-                className="h-24 w-24 opacity-20"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
-              </svg>
-              <span className="px-6 text-center text-xs leading-relaxed opacity-40">
-                Add your photo to{" "}
-                <code className="font-mono">
-                  public/profile.jpg
-                </code>
-              </span>
-            </div>
+            <Image
+              src="/Avery.jpeg"
+              alt="Avery — frontend developer"
+              fill
+              sizes="(max-width: 640px) 256px, 288px"
+              className="object-cover object-top"
+              priority
+            />
           </div>
         </div>
       </div>

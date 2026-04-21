@@ -1,5 +1,8 @@
 import Link from "next/link";
-import { cva, type VariantProps } from "class-variance-authority";
+import {
+  cva,
+  type VariantProps,
+} from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const ctaLink = cva(
@@ -15,15 +18,25 @@ const ctaLink = cva(
   },
 );
 
-interface CtaLinkProps extends VariantProps<typeof ctaLink> {
+interface CtaLinkProps extends VariantProps<
+  typeof ctaLink
+> {
   href: string;
   children: React.ReactNode;
   className?: string;
 }
 
-export function CtaLink({ href, tone, className, children }: CtaLinkProps) {
+export function CtaLink({
+  href,
+  tone,
+  className,
+  children,
+}: CtaLinkProps) {
   return (
-    <Link href={href} className={cn(ctaLink({ tone }), className)}>
+    <Link
+      href={href}
+      className={cn(ctaLink({ tone }), className)}
+    >
       {children}
     </Link>
   );

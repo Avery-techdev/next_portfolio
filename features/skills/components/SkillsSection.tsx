@@ -1,13 +1,26 @@
 import type { Skill } from "../types";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
+import { SkillBar } from "./SkillBar";
 
 const skills: Skill[] = [
-  { name: "HTML", yearsOfExperience: 4 },
-  { name: "CSS", yearsOfExperience: 4 },
-  { name: "JavaScript", yearsOfExperience: 4 },
-  { name: "Accessibility", yearsOfExperience: 4 },
-  { name: "React", yearsOfExperience: 3 },
-  { name: "Next.js", yearsOfExperience: 2 },
+  { name: "HTML", yearsOfExperience: 4, color: "#E34F26" },
+  { name: "CSS", yearsOfExperience: 4, color: "#1572B6" },
+  {
+    name: "JavaScript",
+    yearsOfExperience: 4,
+    color: "#F7DF1E",
+  },
+  {
+    name: "Accessibility",
+    yearsOfExperience: 4,
+    color: "#7C3AED",
+  },
+  { name: "React", yearsOfExperience: 3, color: "#61DAFB" },
+  {
+    name: "Next.js",
+    yearsOfExperience: 2,
+    color: "#d4d4d4",
+  },
 ];
 
 export function SkillsSection() {
@@ -23,10 +36,15 @@ export function SkillsSection() {
         >
           {skills.map((skill) => (
             <li key={skill.name}>
-              <p className="text-2xl font-black text-ink md:text-3xl">
+              <p className="mb-4 text-center text-2xl font-black text-ink md:text-3xl">
                 {skill.name}
               </p>
-              <p className="mt-1 text-sm text-ink-muted">
+              <SkillBar
+                years={skill.yearsOfExperience}
+                label={skill.name}
+                color={skill.color}
+              />
+              <p className="mt-2 text-sm text-ink-muted">
                 {skill.yearsOfExperience}{" "}
                 {skill.yearsOfExperience === 1
                   ? "Year"
