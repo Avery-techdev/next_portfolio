@@ -46,10 +46,7 @@ const gradients = [
 
 export function ProjectsSection() {
   return (
-    <section
-      aria-labelledby="projects-heading"
-      className="border-t border-edge"
-    >
+    <section aria-labelledby="projects-heading">
       <SectionWrapper>
         <div className="mb-10 flex items-baseline justify-between">
           <h2

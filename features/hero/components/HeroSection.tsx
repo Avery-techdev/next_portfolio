@@ -7,10 +7,40 @@ export function HeroSection() {
       className="mx-auto max-w-5xl px-6 py-20 md:px-12 md:py-28"
       aria-label="Introduction"
     >
-      <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
-        {/* Text content — first in DOM for correct mobile order */}
-        <div>
-          <h1 className="text-5xl font-black leading-none tracking-tight text-ink sm:text-6xl md:text-7xl">
+      {/*
+       * Single responsive layout.
+       * Mobile: image in normal flow (centered), text below.
+       * Desktop (md+): image is absolute right, text bleeds into it via w-[68%].
+       * No z-index on text → no isolated stacking context →
+       * mix-blend-difference on h1 blends correctly against the image.
+       */}
+      <div className="relative md:min-h-140">
+        {/* Image — in flow on mobile, absolute on desktop */}
+        <div
+          className="relative mx-auto mb-10 h-80 w-64 overflow-hidden border border-edge bg-canvas md:absolute md:right-0 md:top-0 md:mx-0 md:mb-0 md:h-130 md:w-[42%]"
+          style={{
+            maskImage:
+              "linear-gradient(to bottom, black 80%, transparent 100%)",
+          }}
+        >
+          {/* Decorative circle accent */}
+          <div
+            className="absolute -bottom-10 -right-10 h-44 w-44 rounded-full border-2 border-ink-muted opacity-20"
+            aria-hidden="true"
+          />
+          <Image
+            src="/Avery.jpeg"
+            alt="Avery — frontend developer"
+            fill
+            sizes="(max-width: 768px) 256px, (max-width: 1024px) 40vw, 420px"
+            className="object-contain object-top"
+            priority
+          />
+        </div>
+
+        {/* Text — relative, no z-index (DOM order handles layering on desktop) */}
+        <div className="relative md:w-[68%] md:pt-4">
+          <h1 className="text-5xl font-black leading-none tracking-tight text-ink mix-blend-difference sm:text-6xl lg:text-7xl">
             Nice to meet you!{" "}
             <span className="mt-2 block">
               I&apos;m{" "}
@@ -29,25 +59,6 @@ export function HeroSection() {
           <CtaLink href="#contact" className="mt-8">
             Contact Me
           </CtaLink>
-        </div>
-
-        {/* Profile photo */}
-        <div className="flex justify-center md:justify-end">
-          <div className="relative h-80 w-64 overflow-hidden border border-edge sm:h-96 sm:w-72">
-            {/* Decorative circle accent */}
-            <div
-              className="absolute -bottom-10 -right-10 h-44 w-44 rounded-full border-2 border-ink-muted opacity-20"
-              aria-hidden="true"
-            />
-            <Image
-              src="/Avery.jpeg"
-              alt="Avery — frontend developer"
-              fill
-              sizes="(max-width: 640px) 256px, 288px"
-              className="object-cover object-top"
-              priority
-            />
-          </div>
         </div>
       </div>
     </section>

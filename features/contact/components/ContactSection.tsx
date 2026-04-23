@@ -3,11 +3,7 @@ import { SectionWrapper } from "@/components/ui/SectionWrapper";
 
 export function ContactSection() {
   return (
-    <section
-      id="contact"
-      aria-label="Contact me"
-      className="border-t border-edge"
-    >
+    <section id="contact" aria-label="Contact me">
       <SectionWrapper>
         <div className="mx-auto max-w-lg">
           <ContactForm />

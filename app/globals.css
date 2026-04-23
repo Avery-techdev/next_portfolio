@@ -10,6 +10,7 @@
   --color-ink-muted: #9a9a9a;
   --color-accent: #4ecca3;
   --color-edge: #252525;
+  --color-edge-subtle: #3d3d3d;
 }
 
 /* Font tokens reference JS-injected CSS vars from next/font — inline keeps them reactive */
