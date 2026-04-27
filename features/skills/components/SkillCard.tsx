@@ -15,22 +15,22 @@ export function SkillCard({ skill }: SkillCardProps) {
   const pct = Math.min(proficiency, 100);
 
   return (
-    <article className="flex flex-col gap-5 rounded-xl border border-edge bg-canvas-elevated p-6">
+    <article className="flex flex-col gap-6 rounded-xl border border-edge bg-canvas-elevated p-5">
       {/* Header: icon box + text */}
       <div className="flex items-center gap-4">
         {/* Brand-tinted icon box — inline style justified: dynamic hex per skill */}
         <div
-          className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl"
+          className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl"
           style={{ backgroundColor: `${color}26` }}
           aria-hidden="true"
         >
-          <Icon className="h-7 w-7" style={{ color }} />
+          <Icon className="h-8 w-8" style={{ color }} />
         </div>
         <div>
-          <p className="text-base font-bold text-ink">
+          <p className="text-xl font-bold text-ink">
             {name}
           </p>
-          <p className="text-sm text-ink-muted">
+          <p className="text-lg text-ink-muted">
             {yearsOfExperience} Years Experience
           </p>
         </div>
@@ -44,7 +44,7 @@ export function SkillCard({ skill }: SkillCardProps) {
           aria-valuemin={0}
           aria-valuemax={100}
           aria-label={`${name} proficiency: ${pct}%`}
-          className="h-3 w-full overflow-hidden rounded-full bg-edge"
+          className="h-4 w-full overflow-hidden rounded-full bg-edge"
         >
           {/* Inline style justified: dynamic brand color per skill */}
           <div
@@ -55,7 +55,7 @@ export function SkillCard({ skill }: SkillCardProps) {
             }}
           />
         </div>
-        <p className="self-end text-sm text-ink-muted">
+        <p className="self-end text-lg text-ink-muted">
           {pct}%
         </p>
       </div>

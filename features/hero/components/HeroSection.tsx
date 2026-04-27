@@ -50,15 +50,28 @@ export function HeroSection() {
             </span>
           </h1>
 
-          <p className="mt-6 max-w-sm text-base leading-relaxed text-ink-muted md:text-lg">
-            I&apos;m a frontend developer passionate about
-            building beautiful, accessible web apps that
-            users love.
+          <p className="mt-4 text-base font-medium tracking-widest text-accent uppercase">
+            Frontend Developer
           </p>
 
-          <CtaLink href="#contact" className="mt-8">
-            Contact Me
-          </CtaLink>
+          <div className="mt-6 max-w-sm space-y-3 text-base leading-relaxed text-ink-muted md:text-lg">
+            <p>
+              I&apos;ve always sought out opportunities and
+              challenges that truly matter to me — from
+              media design to finance manager to podcaster.
+            </p>
+            <p>
+              In coding, I finally found my passion. As a
+              frontend developer, I love building websites
+              and applications that people enjoy using.
+            </p>
+          </div>
+
+          <div className="mt-8 flex flex-wrap items-center gap-6">
+            <CtaLink href="mailto:hello@ah-development.de">
+              Contact Me
+            </CtaLink>
+          </div>
         </div>
       </div>
     </section>
