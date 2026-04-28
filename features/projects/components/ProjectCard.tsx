@@ -1,3 +1,7 @@
+"use client";
+// "use client" — needs Intersection Observer for scroll animation
+
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import type { Project } from "../types";
@@ -5,17 +9,51 @@ import type { Project } from "../types";
 interface ProjectCardProps {
   project: Project;
   gradient: string;
+  delay?: number;
 }
 
 export function ProjectCard({
   project,
   gradient,
+  delay = 0,
 }: ProjectCardProps) {
   const isExternal =
     project.href !== "#" && !project.href.startsWith("/");
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      },
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <article>
+    <article
+      ref={ref}
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible
+          ? "translateY(0)"
+          : "translateY(20px)",
+        transition: `all 400ms ease-out ${delay}ms`,
+      }}
+    >
       <Link
         href={project.href}
         {...(isExternal
@@ -26,12 +64,24 @@ export function ProjectCard({
         {/* Project image placeholder — replace with next/image once you have screenshots */}
         <div
           className={cn(
-            "aspect-video w-full overflow-hidden bg-linear-to-br",
+            "relative aspect-video w-full overflow-hidden bg-linear-to-br transition-transform duration-300 ease-out group-hover:scale-102",
             gradient,
           )}
           aria-label={project.imageAlt}
           role="img"
         >
+          {/* Hover overlay */}
+          <div
+            className="absolute inset-0 bg-canvas/80 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100"
+            aria-hidden="true"
+          >
+            <div className="flex h-full items-center justify-center translate-y-2 transition-transform duration-300 ease-out group-hover:translate-y-0">
+              <span className="text-sm font-semibold uppercase tracking-widest text-accent">
+                View Project
+              </span>
+            </div>
+          </div>
+
           {/* Decorative app-screenshot skeleton */}
           <div
             className="flex h-full flex-col gap-3 p-5 opacity-25"

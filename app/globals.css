@@ -5,7 +5,7 @@
  * Never use arbitrary color values in components — add tokens here instead. */
 @theme {
   --color-canvas: #0b0b0b;
-  --color-canvas-elevated: #141414;
+  --color-canvas-elevated: #0f0f0f;
   --color-ink: #ffffff;
   --color-ink-muted: #9a9a9a;
   --color-accent: #4ecca3;
@@ -26,4 +26,45 @@ html {
 body {
   background-color: var(--color-canvas);
   color: var(--color-ink);
+}
+
+/* Animation Keyframes */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes grow-width {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--target-width);
+  }
 }

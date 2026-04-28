@@ -1,9 +1,9 @@
 import { Nav } from "@/components/nav/Nav";
 import { Footer } from "@/components/footer/Footer";
-import { HeroSection } from "@/features/hero/components/HeroSection";
-import { SkillsSection } from "@/features/skills/components/SkillsSection";
-import { ProjectsSection } from "@/features/projects/components/ProjectsSection";
-import { ContactSection } from "@/features/contact/components/ContactSection";
+import { HeroSection } from "@/features/hero";
+import { SkillsSection } from "@/features/skills";
+import { ProjectsSection } from "@/features/projects";
+import { ContactSection } from "@/features/contact";
 
 export default function Home() {
   return (

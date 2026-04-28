@@ -4,6 +4,7 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from "@/components/icons/SocialIcons";
+import { cn } from "@/lib/utils";
 
 const socialLinks = [
   {
@@ -40,7 +41,7 @@ export function SocialLinks({
   return (
     <nav aria-label={label}>
       <ul
-        className={`flex items-center gap-5${className ? ` ${className}` : ""}`}
+        className={cn("flex items-center gap-5", className)}
         role="list"
       >
         {socialLinks.map(
@@ -51,7 +52,7 @@ export function SocialLinks({
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={iconLabel}
-                className="text-ink-muted transition-colors hover:text-ink"
+                className="text-ink-muted transition-all duration-200 hover:text-ink hover:scale-110"
               >
                 <Icon aria-hidden="true" />
               </a>

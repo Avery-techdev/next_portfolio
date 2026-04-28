@@ -1,64 +1,61 @@
 import type { Skill } from "../types";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { SkillCard } from "./SkillCard";
-import {
-  Html5Icon,
-  Css3Icon,
-  JavaScriptIcon,
-  AccessibilityIcon,
-  ReactIcon,
-  NextjsIcon,
-} from "./TechIcons";
 
 const skills: Skill[] = [
   {
-    name: "HTML",
-    yearsOfExperience: 4,
+    name: "React.js",
     proficiency: 90,
-    color: "#E34F26",
-    icon: Html5Icon,
-  },
-  {
-    name: "CSS",
-    yearsOfExperience: 4,
-    proficiency: 88,
-    color: "#1572B6",
-    icon: Css3Icon,
-  },
-  {
-    name: "JavaScript",
-    yearsOfExperience: 4,
-    proficiency: 85,
-    color: "#F7DF1E",
-    icon: JavaScriptIcon,
-  },
-  {
-    name: "Accessibility",
-    yearsOfExperience: 4,
-    proficiency: 80,
-    color: "#7C3AED",
-    icon: AccessibilityIcon,
-  },
-  {
-    name: "React",
-    yearsOfExperience: 3,
-    proficiency: 78,
     color: "#61DAFB",
-    icon: ReactIcon,
+    icon: "react",
   },
   {
     name: "Next.js",
-    yearsOfExperience: 2,
-    proficiency: 70,
+    proficiency: 80,
     color: "#d4d4d4",
-    icon: NextjsIcon,
+    icon: "nextjs",
+  },
+  {
+    name: "TypeScript",
+    proficiency: 80,
+    color: "#3178C6",
+    icon: "typescript",
+  },
+  {
+    name: "JavaScript",
+    proficiency: 90,
+    color: "#F7DF1E",
+    icon: "javascript",
+  },
+  {
+    name: "Tailwind CSS",
+    proficiency: 90,
+    color: "#06B6D4",
+    icon: "tailwind",
+  },
+  {
+    name: "Vue.js",
+    proficiency: 65,
+    color: "#4FC08D",
+    icon: "vue",
+  },
+  {
+    name: "Accessibility",
+    proficiency: 75,
+    color: "#7C3AED",
+    icon: "accessibility",
   },
 ];
 
 const taglines = [
-  { icon: "✦", label: "Always Learning" },
-  { icon: "</>", label: "Building Better Web" },
-  { icon: "✦", label: "Clean & Accessible" },
+  {
+    icon: "✦",
+    text: "Building clean, scalable web applications",
+  },
+  {
+    icon: "⚡",
+    text: "Focused on performance & accessibility",
+  },
 ];
 
 export function SkillsSection() {
@@ -66,31 +63,35 @@ export function SkillsSection() {
     <section aria-label="Skills">
       <SectionWrapper>
         <ul
-          className="grid grid-cols-2 gap-4 md:grid-cols-3"
+          className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 md:grid-cols-3"
           role="list"
         >
-          {skills.map((skill) => (
+          {skills.map((skill, index) => (
             <li key={skill.name}>
-              <SkillCard skill={skill} />
+              <SkillCard skill={skill} delay={index * 60} />
             </li>
           ))}
         </ul>
 
         {/* Taglines row */}
-        <ul
-          className="mt-10 flex flex-wrap justify-center gap-6 text-sm text-ink-muted"
-          role="list"
-        >
-          {taglines.map((t) => (
-            <li
-              key={t.label}
-              className="flex items-center gap-2"
+        <div className="mt-10 flex flex-col items-center justify-center gap-3 text-center md:flex-row md:gap-8">
+          {taglines.map((item) => (
+            <div
+              key={item.text}
+              className="flex items-center gap-2.5"
             >
-              <span aria-hidden="true">{t.icon}</span>
-              <span>{t.label}</span>
-            </li>
+              <span
+                className="text-ink-muted"
+                aria-hidden="true"
+              >
+                {item.icon}
+              </span>
+              <p className="text-sm text-ink-muted">
+                {item.text}
+              </p>
+            </div>
           ))}
-        </ul>
+        </div>
       </SectionWrapper>
     </section>
   );

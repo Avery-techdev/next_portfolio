@@ -69,6 +69,7 @@ export function ProjectsSection() {
                 gradient={
                   gradients[index % gradients.length]
                 }
+                delay={index * 70}
               />
             </li>
           ))}
