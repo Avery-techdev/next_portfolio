@@ -1,19 +1,7 @@
-"use client";
-// "use client" — needs useState for mount detection to trigger animations
-
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import { CtaLink } from "@/components/ui/CtaLink";
 
 export function HeroSection() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    // Delay to next frame to avoid React warning about setState in effect
-    const timer = setTimeout(() => setMounted(true), 0);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <section
       className="mx-auto max-w-5xl px-6 py-20 md:px-12 md:py-28"
@@ -29,14 +17,10 @@ export function HeroSection() {
       <div className="relative md:min-h-140">
         {/* Image — in flow on mobile, absolute on desktop */}
         <div
-          className="relative mx-auto mb-0 h-110 w-full overflow-hidden border border-edge md:absolute md:right-0 md:top-0 md:mx-0 md:mb-0 md:h-130 md:w-[42%]"
+          className="animate-scale-in relative mx-auto mb-0 h-110 w-full overflow-hidden border border-edge md:absolute md:right-0 md:top-0 md:mx-0 md:mb-0 md:h-130 md:w-[42%]"
           style={{
             maskImage:
               "linear-gradient(to bottom, black 80%, transparent 100%)",
-            opacity: mounted ? 1 : 0,
-            transform: mounted ? "scale(1)" : "scale(1.02)",
-            transition:
-              "opacity 500ms ease-out, transform 500ms ease-out",
           }}
         >
           <Image
@@ -51,28 +35,11 @@ export function HeroSection() {
 
         {/* Text — relative, no z-index (DOM order handles layering on desktop) */}
         <div className="relative -mt-8 md:mt-0 md:w-[68%] md:pt-4">
-          <h1
-            className="text-5xl font-black leading-none tracking-tight text-ink mix-blend-difference sm:text-6xl lg:text-7xl"
-            style={{
-              opacity: mounted ? 1 : 0,
-              transform: mounted
-                ? "translateY(0)"
-                : "translateY(20px)",
-              transition:
-                "opacity 500ms ease-out, transform 500ms ease-out",
-            }}
-          >
+          <h1 className="animate-fade-up text-5xl font-black leading-none tracking-tight text-ink mix-blend-difference sm:text-6xl lg:text-7xl">
             Nice to meet you!{" "}
             <span
-              className="mt-2 block"
-              style={{
-                opacity: mounted ? 1 : 0,
-                transform: mounted
-                  ? "translateY(0)"
-                  : "translateY(20px)",
-                transition:
-                  "opacity 500ms ease-out 100ms, transform 500ms ease-out 100ms",
-              }}
+              className="mt-2 block animate-fade-up"
+              style={{ animationDelay: "100ms" }}
             >
               I&apos;m{" "}
               <span className="underline decoration-accent decoration-[3px] underline-offset-[6px]">
@@ -82,29 +49,15 @@ export function HeroSection() {
           </h1>
 
           <p
-            className="mt-4 text-base font-medium tracking-widest text-accent uppercase"
-            style={{
-              opacity: mounted ? 1 : 0,
-              transform: mounted
-                ? "translateY(0)"
-                : "translateY(20px)",
-              transition:
-                "opacity 500ms ease-out 200ms, transform 500ms ease-out 200ms",
-            }}
+            className="animate-fade-up mt-4 text-base font-medium tracking-widest text-accent uppercase"
+            style={{ animationDelay: "200ms" }}
           >
             Frontend Developer
           </p>
 
           <div
-            className="mt-6 max-w-sm space-y-3 text-base leading-relaxed text-ink-muted md:text-lg"
-            style={{
-              opacity: mounted ? 1 : 0,
-              transform: mounted
-                ? "translateY(0)"
-                : "translateY(20px)",
-              transition:
-                "opacity 500ms ease-out 200ms, transform 500ms ease-out 200ms",
-            }}
+            className="animate-fade-up mt-6 max-w-sm space-y-3 text-base leading-relaxed text-ink-muted md:text-lg"
+            style={{ animationDelay: "200ms" }}
           >
             <p>
               I&apos;ve always sought out opportunities and
@@ -119,15 +72,8 @@ export function HeroSection() {
           </div>
 
           <div
-            className="mt-8 flex flex-wrap items-center gap-6"
-            style={{
-              opacity: mounted ? 1 : 0,
-              transform: mounted
-                ? "translateY(0)"
-                : "translateY(20px)",
-              transition:
-                "opacity 500ms ease-out 300ms, transform 500ms ease-out 300ms",
-            }}
+            className="animate-fade-up mt-8 flex flex-wrap items-center gap-6"
+            style={{ animationDelay: "300ms" }}
           >
             <CtaLink href="mailto:hello@ah-development.de">
               Contact Me

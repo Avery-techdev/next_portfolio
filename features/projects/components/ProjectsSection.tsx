@@ -55,7 +55,9 @@ export function ProjectsSection() {
           >
             Projects
           </h2>
-          <CtaLink href="#contact">Contact Me</CtaLink>
+          <CtaLink href="mailto:hello@ah-development.de">
+            Contact Me
+          </CtaLink>
         </div>
 
         <ul

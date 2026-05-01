@@ -60,8 +60,11 @@ const taglines = [
 
 export function SkillsSection() {
   return (
-    <section aria-label="Skills">
+    <section aria-labelledby="skills-heading">
       <SectionWrapper>
+        <h2 id="skills-heading" className="sr-only">
+          Skills
+        </h2>
         <ul
           className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 md:grid-cols-3"
           role="list"

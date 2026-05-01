@@ -1,31 +1,25 @@
 import {
   GitHubIcon,
-  CodeIcon,
+  DevToIcon,
   LinkedInIcon,
-  TwitterIcon,
 } from "@/components/icons/SocialIcons";
 import { cn } from "@/lib/utils";
 
 const socialLinks = [
   {
-    href: "https://github.com",
+    href: "https://github.com/Avery-techdev",
     label: "GitHub",
     Icon: GitHubIcon,
   },
   {
-    href: "https://codepen.io",
-    label: "CodePen",
-    Icon: CodeIcon,
+    href: "https://dev.to/avery_code",
+    label: "DEV Community",
+    Icon: DevToIcon,
   },
   {
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/avery-hauschild-038902200/",
     label: "LinkedIn",
     Icon: LinkedInIcon,
-  },
-  {
-    href: "https://twitter.com",
-    label: "Twitter",
-    Icon: TwitterIcon,
   },
 ];
 

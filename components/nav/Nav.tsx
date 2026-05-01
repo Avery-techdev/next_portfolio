@@ -9,7 +9,7 @@ export function Nav() {
           href="/"
           className="text-lg font-bold tracking-tight text-ink transition-colors hover:text-accent"
         >
-          avery.
+          ah-development.
         </Link>
 
         <SocialLinks label="Social links" />

@@ -13,9 +13,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ah-development.de"),
   title: "Portfolio | Avery",
   description:
     "Frontend developer passionate about building beautiful, accessible web apps that users love.",
+  openGraph: {
+    title: "Portfolio | Avery",
+    description:
+      "Frontend developer passionate about building beautiful, accessible web apps that users love.",
+    url: "/",
+    siteName: "ah-development",
+    type: "website",
+    locale: "en_US",
+  },
 };
 
 export default function RootLayout({

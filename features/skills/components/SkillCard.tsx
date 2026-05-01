@@ -106,7 +106,7 @@ export function SkillCard({
         transform: isVisible
           ? "translateY(0)"
           : "translateY(20px)",
-        transition: `all 400ms ease-out ${delay}ms`,
+        transition: `opacity 400ms ease-out ${delay}ms, transform 400ms ease-out ${delay}ms`,
         ...(isHighProficiency
           ? {
               borderTopWidth: "3px",

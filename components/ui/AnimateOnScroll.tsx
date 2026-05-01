@@ -52,7 +52,7 @@ export function AnimateOnScroll({
     <div
       ref={ref}
       className={cn(
-        "transition-all duration-500 ease-out",
+        "transition-[opacity,transform] duration-500 ease-out",
         variant === "fade-up" && [
           "opacity-0 translate-y-5",
           isVisible && "opacity-100 translate-y-0",

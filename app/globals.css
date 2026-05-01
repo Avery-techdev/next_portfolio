@@ -11,6 +11,11 @@
   --color-accent: #4ecca3;
   --color-edge: #252525;
   --color-edge-subtle: #3d3d3d;
+
+  /* Animation utilities — use animate-fade-up, animate-fade-in, animate-scale-in */
+  --animate-fade-up: fade-up 500ms ease-out both;
+  --animate-fade-in: fade-in 500ms ease-out both;
+  --animate-scale-in: scale-in 500ms ease-out both;
 }
 
 /* Font tokens reference JS-injected CSS vars from next/font — inline keeps them reactive */
@@ -21,6 +26,18 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Respect user's motion preference — disables all CSS animations & transitions */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 body {
