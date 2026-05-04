@@ -15,14 +15,12 @@ export function ContactSection() {
           <p className="mt-3 text-sm font-medium tracking-widest text-accent uppercase">
             Available for freelance work
           </p>
-          <div className="mt-8">
-            <CtaLink
-              href="mailto:hello@ah-development.de"
-              className="text-xl font-bold tracking-widest"
-            >
-              Send an Email
-            </CtaLink>
-          </div>
+          <CtaLink
+            href="mailto:hello@ah-development.de"
+            className="mt-8 inline-block text-xl font-bold tracking-widest"
+          >
+            Send an Email
+          </CtaLink>
         </div>
       </SectionWrapper>
     </section>

@@ -77,9 +77,12 @@ export function SkillsSection() {
         </ul>
 
         {/* Taglines row */}
-        <div className="mt-10 flex flex-col items-center justify-center gap-3 text-center md:flex-row md:gap-8">
+        <ul
+          role="list"
+          className="mt-10 flex flex-col items-center justify-center gap-3 text-center md:flex-row md:gap-8"
+        >
           {taglines.map((item) => (
-            <div
+            <li
               key={item.text}
               className="flex items-center gap-2.5"
             >
@@ -92,9 +95,9 @@ export function SkillsSection() {
               <p className="text-sm text-ink-muted">
                 {item.text}
               </p>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </SectionWrapper>
     </section>
   );

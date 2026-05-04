@@ -24,18 +24,21 @@ interface CtaLinkProps extends VariantProps<
   href: string;
   children: React.ReactNode;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export function CtaLink({
   href,
   tone,
   className,
+  style,
   children,
 }: CtaLinkProps) {
   return (
     <Link
       href={href}
       className={cn(ctaLink({ tone }), className)}
+      style={style}
     >
       {children}
     </Link>

@@ -71,14 +71,13 @@ export function HeroSection() {
             </p>
           </div>
 
-          <div
-            className="animate-fade-up mt-8 flex flex-wrap items-center gap-6"
+          <CtaLink
+            href="mailto:hello@ah-development.de"
+            className="animate-fade-up mt-8 inline-block"
             style={{ animationDelay: "300ms" }}
           >
-            <CtaLink href="mailto:hello@ah-development.de">
-              Contact Me
-            </CtaLink>
-          </div>
+            Contact Me
+          </CtaLink>
         </div>
       </div>
     </section>

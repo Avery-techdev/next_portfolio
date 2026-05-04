@@ -128,11 +128,9 @@ export function SkillCard({
             style={{ color }}
           />
         </div>
-        <div className="min-w-0 flex-1">
-          <p className="text-base font-bold text-ink md:text-lg lg:text-xl">
-            {name}
-          </p>
-        </div>
+        <h3 className="min-w-0 flex-1 text-base font-bold text-ink md:text-lg lg:text-xl">
+          {name}
+        </h3>
       </div>
 
       {/* Progress bar + percentage */}
