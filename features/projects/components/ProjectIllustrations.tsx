@@ -77,7 +77,50 @@ export function SkyCatcherIllustration() {
   );
 }
 
-/** Hive·Words — 7-hex honeycomb flower, golden center tile */
+/** Memo·World — scattered polaroid cards, two matched face-up with landmark line-art */
+export function MemoWorldIllustration() {
+  return (
+    <svg
+      viewBox="0 0 130 100"
+      fill="none"
+      aria-hidden="true"
+      className="h-full w-full"
+    >
+      {/* Card 1 — face-down, back-left, rotated CCW */}
+      <g transform="translate(22,52) rotate(-10)">
+        <rect x="-18" y="-24" width="36" height="46" rx="1.5" fill="#e8e8e8" />
+        <rect x="-16" y="-22" width="32" height="32" fill="#2b2b2b" />
+        {/* Diagonal line pattern (card-back-pattern) */}
+        <line x1="-16" y1="-6"  x2="-2" y2="-22" stroke="#6b6b6b" strokeWidth="0.8" />
+        <line x1="-16" y1="4"   x2="8"  y2="-22" stroke="#6b6b6b" strokeWidth="0.8" />
+        <line x1="-16" y1="10"  x2="16" y2="-18" stroke="#6b6b6b" strokeWidth="0.8" />
+        <line x1="-8"  y1="10"  x2="16" y2="-8"  stroke="#6b6b6b" strokeWidth="0.8" />
+        <line x1="2"   y1="10"  x2="16" y2="0"   stroke="#6b6b6b" strokeWidth="0.8" />
+      </g>
+
+      {/* Card 2 — face-up matched, arch landmark (Arc de Triomphe), slight CW tilt */}
+      <g transform="translate(65,46) rotate(4)">
+        <rect x="-20" y="-27" width="40" height="52" rx="1.5" fill="#fafafa" />
+        <rect x="-18" y="-25" width="36" height="36" fill="#242424" />
+        <line x1="-9"  y1="11"  x2="-9" y2="-2"  stroke="#fafafa" strokeWidth="1.2" />
+        <path d="M -9 -2 Q 0 -16 9 -2" stroke="#fafafa" strokeWidth="1.2" />
+        <line x1="9"   y1="-2"  x2="9"  y2="11"  stroke="#fafafa" strokeWidth="1.2" />
+        <line x1="-13" y1="11"  x2="13" y2="11"  stroke="#fafafa" strokeWidth="1.2" />
+      </g>
+
+      {/* Card 3 — face-up matched, tower landmark (Eiffel-style), slight CCW tilt */}
+      <g transform="translate(108,49) rotate(-6)">
+        <rect x="-20" y="-27" width="40" height="52" rx="1.5" fill="#fafafa" />
+        <rect x="-18" y="-25" width="36" height="36" fill="#242424" />
+        <line x1="0"   y1="-22" x2="-11" y2="11"  stroke="#fafafa" strokeWidth="1.2" />
+        <line x1="0"   y1="-22" x2="11"  y2="11"  stroke="#fafafa" strokeWidth="1.2" />
+        <line x1="-6"  y1="-6"  x2="6"   y2="-6"  stroke="#fafafa" strokeWidth="1" />
+        <line x1="-9"  y1="5"   x2="9"   y2="5"   stroke="#fafafa" strokeWidth="1" />
+        <line x1="-1"  y1="-26" x2="1"   y2="-22" stroke="#fafafa" strokeWidth="1.5" />
+      </g>
+    </svg>
+  );
+}
 export function HiveWordsIllustration() {
   // Flat-top hexagon, circumradius r=17, spaced at r=18
   const hex =

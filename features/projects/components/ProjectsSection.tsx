@@ -38,6 +38,23 @@ const projects: Project[] = [
     githubUrl:
       "https://github.com/Avery-techdev/hive-words",
   },
+  {
+    id: "memo-world",
+    title: "Memo·World",
+    description:
+      "Black-and-white photography memory game — flip polaroid cards, match landmarks, beat the clock.",
+    tags: [
+      "Vue 3",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS v4",
+    ],
+    imageAlt:
+      "Memo·World — dark stage gradient representing the polaroid photography aesthetic",
+    liveUrl: "https://memo-world-six.vercel.app",
+    githubUrl:
+      "https://github.com/Avery-techdev/memo-world",
+  },
 ];
 
 // Gradients are derived from each project's own design tokens (see src/styles/index.css)
@@ -46,6 +63,8 @@ const gradients = [
   "bg-linear-to-b from-[#ffd4a0] via-[#ff8c42] to-[#ff4500]",
   // Hive·Words — honey world: deep brown canvas → golden hex border
   "bg-linear-to-br from-[#3d2500] via-[#4d2e00] to-[#c17f24]",
+  // Memo·World — dark photography stage: graphite → near-black
+  "bg-linear-to-br from-[#4a4a4a] via-[#242424] to-[#050505]",
 ];
 
 export function ProjectsSection() {
@@ -69,7 +88,14 @@ export function ProjectsSection() {
           role="list"
         >
           {projects.map((project, index) => (
-            <li key={project.id}>
+            <li
+              key={project.id}
+              className={
+                index === projects.length - 1 && projects.length % 2 !== 0
+                  ? "sm:col-span-2 sm:mx-auto sm:w-[calc(50%-1rem)]"
+                  : undefined
+              }
+            >
               <ProjectCard
                 project={project}
                 gradient={

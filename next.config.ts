@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  // Unique build ID per build → alle /_next/static/-Assets bekommen neue Pfade
+  // → Browser und CDN-Caches werden automatisch invalidiert
+  generateBuildId: () => `build-${Date.now()}`,
 };
 
 export default nextConfig;

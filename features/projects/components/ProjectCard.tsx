@@ -8,12 +8,14 @@ import type { Project } from "../types";
 import {
   SkyCatcherIllustration,
   HiveWordsIllustration,
+  MemoWorldIllustration,
 } from "./ProjectIllustrations";
 
 /** SVG illustration mapped by project id */
 const illustrations: Record<string, React.ReactNode> = {
   "sky-catcher": <SkyCatcherIllustration />,
   "hive-words": <HiveWordsIllustration />,
+  "memo-world": <MemoWorldIllustration />,
 };
 
 interface ProjectCardProps {

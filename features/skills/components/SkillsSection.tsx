@@ -62,9 +62,14 @@ export function SkillsSection() {
   return (
     <section aria-labelledby="skills-heading">
       <SectionWrapper>
-        <h2 id="skills-heading" className="sr-only">
-          Skills
-        </h2>
+        <div className="mb-10 flex items-baseline justify-between">
+          <h2
+            id="skills-heading"
+            className="text-4xl font-black text-ink md:text-5xl"
+          >
+            Skills
+          </h2>
+        </div>
         <ul
           className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 md:grid-cols-3"
           role="list"
