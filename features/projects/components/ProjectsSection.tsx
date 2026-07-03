@@ -5,43 +5,33 @@ import type { Project } from "../types";
 
 const projects: Project[] = [
   {
-    id: "design-agency",
-    title: "Design Agency Website",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-    imageAlt: "Design agency website with colorful layout",
-    href: "#",
+    id: "sky-catcher",
+    title: "Sky·Catcher",
+    description:
+      "Minimalist arcade catch game — move the catcher, grab what falls, chase your best score.",
+    tags: ["React 19", "TypeScript", "Vite", "Tailwind CSS v4"],
+    imageAlt: "Sky-Catcher — warm sunset gradient representing the game world",
+    liveUrl: "https://sky-catcher.vercel.app",
+    githubUrl: "https://github.com/Avery-techdev/sky-catcher",
   },
   {
-    id: "budget-app",
-    title: "Budget Tracking App",
-    tags: ["React", "TypeScript", "Node.js"],
-    imageAlt:
-      "Budget tracking app showing charts and statistics",
-    href: "#",
-  },
-  {
-    id: "entertainment-app",
-    title: "Entertainment Web App",
-    tags: ["HTML", "CSS", "JavaScript"],
-    imageAlt:
-      "Entertainment web app with a movie grid layout",
-    href: "#",
-  },
-  {
-    id: "art-gallery",
-    title: "Art Gallery Showcase",
-    tags: ["HTML", "CSS", "JavaScript"],
-    imageAlt:
-      "Art gallery website with masonry image layout",
-    href: "#",
+    id: "hive-words",
+    title: "Hive·Words",
+    description:
+      "Honeycomb word game — spell words from 7 letters, one shared center, chase the highest score.",
+    tags: ["React 19", "TypeScript", "Vite", "Tailwind CSS v4"],
+    imageAlt: "Hive-Words — deep honey gradient representing the hive world",
+    liveUrl: "https://hive-words.vercel.app",
+    githubUrl: "https://github.com/Avery-techdev/hive-words",
   },
 ];
 
+// Gradients are derived from each project's own design tokens (see src/styles/index.css)
 const gradients = [
-  "from-violet-900 to-fuchsia-900",
-  "from-emerald-900 to-teal-900",
-  "from-blue-900 to-indigo-900",
-  "from-rose-900 to-orange-900",
+  // Sky·Catcher — sunset world: sky-top → sky-mid → sky-bottom
+  "bg-linear-to-b from-[#ffd4a0] via-[#ff8c42] to-[#ff4500]",
+  // Hive·Words — honey world: deep brown canvas → golden hex border
+  "bg-linear-to-br from-[#3d2500] via-[#4d2e00] to-[#c17f24]",
 ];
 
 export function ProjectsSection() {
