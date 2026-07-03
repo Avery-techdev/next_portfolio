@@ -91,7 +91,8 @@ export function ProjectsSection() {
             <li
               key={project.id}
               className={
-                index === projects.length - 1 && projects.length % 2 !== 0
+                index === projects.length - 1 &&
+                projects.length % 2 !== 0
                   ? "sm:col-span-2 sm:mx-auto sm:w-[calc(50%-1rem)]"
                   : undefined
               }
