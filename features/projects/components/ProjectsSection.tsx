@@ -9,20 +9,34 @@ const projects: Project[] = [
     title: "Sky·Catcher",
     description:
       "Minimalist arcade catch game — move the catcher, grab what falls, chase your best score.",
-    tags: ["React 19", "TypeScript", "Vite", "Tailwind CSS v4"],
-    imageAlt: "Sky-Catcher — warm sunset gradient representing the game world",
+    tags: [
+      "React 19",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS v4",
+    ],
+    imageAlt:
+      "Sky-Catcher — warm sunset gradient representing the game world",
     liveUrl: "https://sky-catcher.vercel.app",
-    githubUrl: "https://github.com/Avery-techdev/sky-catcher",
+    githubUrl:
+      "https://github.com/Avery-techdev/sky-catcher",
   },
   {
     id: "hive-words",
     title: "Hive·Words",
     description:
       "Honeycomb word game — spell words from 7 letters, one shared center, chase the highest score.",
-    tags: ["React 19", "TypeScript", "Vite", "Tailwind CSS v4"],
-    imageAlt: "Hive-Words — deep honey gradient representing the hive world",
+    tags: [
+      "React 19",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS v4",
+    ],
+    imageAlt:
+      "Hive-Words — deep honey gradient representing the hive world",
     liveUrl: "https://hive-words.vercel.app",
-    githubUrl: "https://github.com/Avery-techdev/hive-words",
+    githubUrl:
+      "https://github.com/Avery-techdev/hive-words",
   },
 ];
 

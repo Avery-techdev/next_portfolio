@@ -59,13 +59,23 @@ export function ProjectCard({
     if (!overlayOpen) return;
 
     const handleOutsideClick = (e: MouseEvent) => {
-      if (ref.current && !ref.current.contains(e.target as Node)) {
+      if (
+        ref.current &&
+        !ref.current.contains(e.target as Node)
+      ) {
         setOverlayOpen(false);
       }
     };
 
-    document.addEventListener("mousedown", handleOutsideClick);
-    return () => document.removeEventListener("mousedown", handleOutsideClick);
+    document.addEventListener(
+      "mousedown",
+      handleOutsideClick,
+    );
+    return () =>
+      document.removeEventListener(
+        "mousedown",
+        handleOutsideClick,
+      );
   }, [overlayOpen]);
 
   return (
@@ -73,7 +83,9 @@ export function ProjectCard({
       ref={ref}
       style={{
         opacity: isVisible ? 1 : 0,
-        transform: isVisible ? "translateY(0)" : "translateY(20px)",
+        transform: isVisible
+          ? "translateY(0)"
+          : "translateY(20px)",
         transition: `all 400ms ease-out ${delay}ms`,
       }}
     >
@@ -105,7 +117,9 @@ export function ProjectCard({
             <div
               className={cn(
                 "absolute inset-0 hidden sm:flex items-start justify-end p-6 transition-opacity duration-300 ease-out",
-                overlayOpen ? "opacity-0" : "group-hover:opacity-0",
+                overlayOpen
+                  ? "opacity-0"
+                  : "group-hover:opacity-0",
               )}
             >
               <div className="h-28 w-28 opacity-90">
@@ -118,7 +132,9 @@ export function ProjectCard({
           <div
             className={cn(
               "absolute inset-x-0 bottom-0 bg-linear-to-t from-black/75 via-black/40 to-transparent px-5 pb-5 pt-16 transition-opacity duration-300 ease-out",
-              overlayOpen ? "opacity-0" : "group-hover:opacity-0",
+              overlayOpen
+                ? "opacity-0"
+                : "group-hover:opacity-0",
             )}
           >
             <h3 className="text-xl font-black uppercase tracking-widest text-white drop-shadow-md">
