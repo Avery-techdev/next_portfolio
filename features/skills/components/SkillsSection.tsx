@@ -31,7 +31,7 @@ const skills: Skill[] = [
     name: "Tailwind CSS",
     color: "#06B6D4",
     icon: "tailwind",
-    label: "PROFICIENT",
+    label: "PRIMARY",
   },
   {
     name: "Vue.js",
