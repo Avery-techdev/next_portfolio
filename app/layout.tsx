@@ -14,14 +14,14 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ah-development.de"),
-  title: "Portfolio | Avery",
+  title: "Portfolio | Avery Hauschild — Frontend Developer",
   description:
     "Frontend developer passionate about building beautiful, accessible web apps that users love.",
   icons: {
     icon: "/icon.png",
   },
   openGraph: {
-    title: "Portfolio | Avery",
+    title: "Portfolio | Avery Hauschild — Frontend Developer",
     description:
       "Frontend developer passionate about building beautiful, accessible web apps that users love.",
     url: "/",

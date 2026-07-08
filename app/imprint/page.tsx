@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Imprint | Avery",
+  title: "Imprint | Avery Hauschild",
 };
 
 export default function ImpressumPage() {
