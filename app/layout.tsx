@@ -29,6 +29,14 @@ export const metadata: Metadata = {
     siteName: "ah-development",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Portfolio | Avery Hauschild — Frontend Developer",
+      },
+    ],
   },
 };
 
