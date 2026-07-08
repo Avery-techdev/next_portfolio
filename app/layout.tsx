@@ -21,7 +21,8 @@ export const metadata: Metadata = {
     icon: "/icon.png",
   },
   openGraph: {
-    title: "Portfolio | Avery Hauschild — Frontend Developer",
+    title:
+      "Portfolio | Avery Hauschild — Frontend Developer",
     description:
       "Frontend developer passionate about building beautiful, accessible web apps that users love.",
     url: "/",
