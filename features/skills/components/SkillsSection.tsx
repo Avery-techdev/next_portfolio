@@ -5,45 +5,45 @@ import { SkillCard } from "./SkillCard";
 const skills: Skill[] = [
   {
     name: "React.js",
-    proficiency: 90,
     color: "#61DAFB",
     icon: "react",
+    label: "PRIMARY",
   },
   {
     name: "Next.js",
-    proficiency: 80,
     color: "#d4d4d4",
     icon: "nextjs",
+    label: "PROFICIENT",
   },
   {
     name: "TypeScript",
-    proficiency: 80,
     color: "#3178C6",
     icon: "typescript",
+    label: "PRIMARY",
   },
   {
     name: "JavaScript",
-    proficiency: 90,
     color: "#F7DF1E",
     icon: "javascript",
+    label: "PRIMARY",
   },
   {
     name: "Tailwind CSS",
-    proficiency: 90,
     color: "#06B6D4",
     icon: "tailwind",
+    label: "PROFICIENT",
   },
   {
     name: "Vue.js",
-    proficiency: 65,
     color: "#4FC08D",
     icon: "vue",
+    label: "PROFICIENT",
   },
   {
     name: "Accessibility",
-    proficiency: 75,
     color: "#7C3AED",
     icon: "accessibility",
+    label: "PROFICIENT",
   },
 ];
 
