@@ -69,6 +69,18 @@ export function HeroSection() {
               frontend developer, I love building websites
               and applications that people enjoy using.
             </p>
+            <p>
+              Under{" "}
+              <a
+                href="https://avery-labs.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-sm font-semibold text-accent underline decoration-accent underline-offset-4 transition-colors duration-200 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              >
+                Avery Labs
+              </a>
+              , I build my own digital products.
+            </p>
           </div>
 
           <CtaLink

@@ -34,15 +34,21 @@ const skills: Skill[] = [
     label: "PRIMARY",
   },
   {
+    name: "Accessibility",
+    color: "#7C3AED",
+    icon: "accessibility",
+    label: "PRIMARY",
+  },
+  {
     name: "Vue.js",
     color: "#4FC08D",
     icon: "vue",
     label: "PROFICIENT",
   },
   {
-    name: "Accessibility",
-    color: "#7C3AED",
-    icon: "accessibility",
+    name: "Supabase",
+    color: "#3FCF8E",
+    icon: "supabase",
     label: "PROFICIENT",
   },
 ];

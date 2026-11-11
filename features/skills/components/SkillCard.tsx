@@ -11,6 +11,7 @@ import {
   VueIcon,
   TailwindIcon,
   AccessibilityIcon,
+  SupabaseIcon,
 } from "../components/TechIcons";
 
 interface SkillCardProps {
@@ -30,6 +31,7 @@ const iconMap: Record<
   vue: VueIcon,
   tailwind: TailwindIcon,
   accessibility: AccessibilityIcon,
+  supabase: SupabaseIcon,
 };
 
 export function SkillCard({
