@@ -4,8 +4,13 @@ export interface ProjectLink {
   href: string;
 }
 
+/** Project group; used to split the project list into sections later on */
+export type ProjectCategory = "product" | "app" | "game";
+
 export interface Project {
   id: string;
+  /** Kind of project (own product, business app, game) */
+  category: ProjectCategory;
   title: string;
   /** Short description shown below the title */
   description: string;

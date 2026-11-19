@@ -11,6 +11,7 @@ import {
   MemoWorldIllustration,
 } from "./ProjectIllustrations";
 import { CompanionIllustration } from "./CompanionIllustrations";
+import { FlowForgeIllustration } from "./FlowForgeIllustration";
 
 /** SVG illustration mapped by project id */
 const illustrations: Record<string, React.ReactNode> = {
@@ -18,6 +19,7 @@ const illustrations: Record<string, React.ReactNode> = {
   "hive-words": <HiveWordsIllustration />,
   "memo-world": <MemoWorldIllustration />,
   "avery-trading-companion": <CompanionIllustration />,
+  "flow-forge": <FlowForgeIllustration />,
 };
 
 interface ProjectCardProps {

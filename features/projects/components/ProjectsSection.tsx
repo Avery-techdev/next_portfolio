@@ -6,6 +6,7 @@ import type { Project } from "../types";
 const projects: Project[] = [
   {
     id: "avery-trading-companion",
+    category: "product",
     title: "Avery Trading Companion",
     description:
       "Web app that checks every order against the trader’s own rules, calculates stop-loss and position size and supports the trader during the running trade. German interface.",
@@ -28,7 +29,29 @@ const projects: Project[] = [
     ],
   },
   {
+    id: "flow-forge",
+    category: "app",
+    title: "FlowForge",
+    description:
+      "Visual workflow builder — design automations from templates, run them and track every execution.",
+    tags: ["React 19", "TypeScript", "React Flow", "Zustand"],
+    imageAlt:
+      "FlowForge: indigo surface with the FlowForge mark, two connected workflow nodes",
+    background: "bg-linear-to-br from-flowforge-indigo to-canvas",
+    links: [
+      {
+        label: "Live Demo",
+        href: "https://flow-forge-nu-livid.vercel.app/",
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/Avery-techdev/flow-forge",
+      },
+    ],
+  },
+  {
     id: "sky-catcher",
+    category: "game",
     title: "Sky·Catcher",
     description:
       "Minimalist arcade catch game — move the catcher, grab what falls, chase your best score.",
@@ -53,6 +76,7 @@ const projects: Project[] = [
   },
   {
     id: "hive-words",
+    category: "game",
     title: "Hive·Words",
     description:
       "Honeycomb word game — spell words from 7 letters, one shared center, chase the highest score.",
@@ -77,6 +101,7 @@ const projects: Project[] = [
   },
   {
     id: "memo-world",
+    category: "game",
     title: "Memo·World",
     description:
       "Black-and-white photography memory game — flip polaroid cards, match landmarks, beat the clock.",
