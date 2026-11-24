@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { siteUrl } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ah-development.de"),
+  metadataBase: new URL(siteUrl),
   title: "Portfolio | Avery Hauschild — Frontend Developer",
   description:
     "Frontend developer passionate about building beautiful, accessible web apps that users love.",

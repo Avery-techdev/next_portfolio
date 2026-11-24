@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { CtaLink } from "@/components/ui/CtaLink";
+import { profileUrls } from "@/lib/site";
 
 export function HeroSection() {
   return (
@@ -72,7 +73,7 @@ export function HeroSection() {
             <p>
               Under{" "}
               <a
-                href="https://avery-labs.io/"
+                href={profileUrls.averyLabs}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-sm font-semibold text-accent underline decoration-accent underline-offset-4 transition-colors duration-200 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"

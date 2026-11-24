@@ -3,6 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Imprint | Avery Hauschild",
+  alternates: { canonical: "/imprint/" },
 };
 
 export default function ImpressumPage() {

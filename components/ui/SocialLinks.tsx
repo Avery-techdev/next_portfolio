@@ -4,20 +4,21 @@ import {
   LinkedInIcon,
 } from "@/components/icons/SocialIcons";
 import { cn } from "@/lib/utils";
+import { profileUrls } from "@/lib/site";
 
 const socialLinks = [
   {
-    href: "https://github.com/Avery-techdev",
+    href: profileUrls.github,
     label: "GitHub",
     Icon: GitHubIcon,
   },
   {
-    href: "https://dev.to/avery_code",
+    href: profileUrls.devTo,
     label: "DEV Community",
     Icon: DevToIcon,
   },
   {
-    href: "https://www.linkedin.com/in/avery-hauschild-038902200/",
+    href: profileUrls.linkedIn,
     label: "LinkedIn",
     Icon: LinkedInIcon,
   },

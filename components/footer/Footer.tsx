@@ -1,5 +1,6 @@
 import { FooterLink } from "./FooterLink";
 import { SocialLinks } from "@/components/ui/SocialLinks";
+import { profileUrls } from "@/lib/site";
 
 export function Footer(): React.JSX.Element {
   return (
@@ -16,7 +17,7 @@ export function Footer(): React.JSX.Element {
               <FooterLink href="/privacy-policy">
                 Privacy Policy
               </FooterLink>
-              <FooterLink href="https://avery-labs.io/" isExternal>
+              <FooterLink href={profileUrls.averyLabs} isExternal>
                 Avery Labs
               </FooterLink>
             </div>
